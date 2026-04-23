@@ -1,0 +1,11 @@
+[project]
+name = "vitta"
+version = "0.1.0"
+description = "Video-based Traffic Trajectory extraction and Analysis tool for Indian mixed traffic conditions"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.2.6",
+    "opencv-python-headless>=4.13.0.92",
+    "ultralytics>=8.4.41",
+]

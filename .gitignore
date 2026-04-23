@@ -1,0 +1,13 @@
+# Virtual environment
+.venv/
+__pycache__/
+
+# Model weights
+*.pt
+
+# Extracted frames
+frames/
+output/
+
+# UV lock (optional, remove this line if you want reproducible builds)
+# uv.lock
