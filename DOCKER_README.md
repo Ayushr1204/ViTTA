@@ -5,6 +5,27 @@ No programming experience is needed. Just follow each step carefully.
 
 ---
 
+## 🐳 Docker Hub
+
+ViTTA is published as a pre-built Docker image on **Docker Hub** — no compilation or source code required.
+
+> 🔗 **Docker Hub:** [https://hub.docker.com/r/cr1tikal/vitta](https://hub.docker.com/repository/docker/cr1tikal/vitta/general)
+
+| Detail | Value |
+|---|---|
+| **Image** | `cr1tikal/vitta:latest` |
+| **Size** | ~5 GB (compressed) |
+| **Platform** | Linux/amd64 (NVIDIA GPU required) |
+
+To pull the image manually:
+```
+docker pull cr1tikal/vitta:latest
+```
+
+> 💡 You don't need to pull manually — the `docker compose up` command in **Step 4** will download it automatically if it isn't already on your machine.
+
+---
+
 ## 📋 Before You Start — What You'll Need
 
 | Requirement | Details |
@@ -54,7 +75,7 @@ Docker is the tool that runs ViTTA in an isolated environment on your computer.
 
 ## Step 3 — Download the Setup File
 
-You only need **one small file** to run ViTTA. 
+You only need **one small file** to run ViTTA. This file tells Docker to download the ViTTA image from [Docker Hub](https://hub.docker.com/repository/docker/cr1tikal/vitta/general) and run it on your machine.
 
 1. Create a new folder on your computer, for example: `C:\ViTTA`
 2. Download the file linked below and save it inside that folder:
