@@ -1,0 +1,50 @@
+# ----- Ignore everything that shouldn't be in the Docker build context -----
+
+# Virtual environments
+.venv/
+venv/
+
+# Git
+.git/
+.gitignore
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.agents/
+
+# Output / runtime data (regenerated at runtime)
+output/
+frames/
+training_data/
+runs/
+.benchmarks/
+.pytest_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large files we don't need in the image
+uv.lock
+*.pdf
+
+# Docker files themselves
+Dockerfile
+docker-compose.yml
+.dockerignore
+DOCKER_README.md
+
+# Test artifacts
+tests/
+test_report.pdf

@@ -45,6 +45,11 @@ class PipelineConfig:
     yolo_confidence: float = 0.25
     yolo_iou_threshold: float = 0.45
 
+    # ── Tracking ──────────────────────────────────────────────────────
+    # Optional TrackerConfig; import lazily to avoid circular deps.
+    # Set to None to skip the tracking stage entirely.
+    tracker_config: Optional["TrackerConfig"] = None  # type: ignore[name-defined]
+
     def __post_init__(self):
         """Ensure output directory exists."""
         self.output_dir = Path(self.output_dir)

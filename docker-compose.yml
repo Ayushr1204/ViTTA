@@ -1,0 +1,22 @@
+services:
+  vitta:
+    build: .
+    container_name: vitta-web
+    ports:
+      - "8000:8000"
+    volumes:
+      - vitta-data:/app/output          # Persist processed results across restarts
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all      # Expose all GPUs to the container
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility,video
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1                  # Request 1 GPU (change to 'all' for multi-GPU)
+              capabilities: [gpu]
+    restart: unless-stopped             # Auto-restart on crash or reboot
+
+volumes:
+  vitta-data:                           # Named volume for output persistence
